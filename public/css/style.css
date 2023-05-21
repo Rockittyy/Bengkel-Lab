@@ -4,7 +4,9 @@
     src: url("../assets/fonts/Nebula/Nebula-Regular.otf")
 }
 
-
+#assets{
+    display: none;
+}
 
 :root {
     --main-bg-color: #E4E4E4;

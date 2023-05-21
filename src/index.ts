@@ -5,6 +5,8 @@ import ejs from 'ejs';
 import path, { resolve } from 'path';
 import { __dirname, __filename, __parentdir } from './common.js'
 import { rejects } from 'assert';
+import chalk from 'chalk';
+import { error } from 'console';
 
 //* config
 const port = 8080;
@@ -35,24 +37,22 @@ async function readFile(...paths: Array<string>): Promise<string> {
 }
 // load html from path, return Document from dom 
 //TODO: You can make a chache for this
-async function loadHtml(...paths: Array<string>): Promise<Document> {
+async function loadElement(...paths: Array<string>): Promise<HTMLElement> {
     return new Promise((resolve, rejects) => {
         readFile(...paths).then((rawHtml) => {
-            resolve(new JSDOM(rawHtml).window.document);
+            const element = new JSDOM(rawHtml).window.document.documentElement.lastElementChild?.firstElementChild as HTMLElement;
+            element ? resolve(element) : rejects("empty document")
         }).catch((err) => rejects(err));
     })
 }
-
-const serialize = (doc: Document): string => doc.documentElement.outerHTML;
+const serialize = (el: Element): string => el.outerHTML;
 async function sLoadHtml(...paths: Array<string>) {
-    return serialize(await loadHtml(...paths));
+    return serialize(await loadElement(...paths));
 }
 // default objects property, for transfering code to ejs
 //? kinda work like a chache after a think about this
 const ejsOb = {
-    partials:{
-        logoBl:await sLoadHtml(__partials,'logoBL.ejs'),
-    }
+
 }
 
 //* main start here
