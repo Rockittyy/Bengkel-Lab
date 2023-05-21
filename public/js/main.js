@@ -28,6 +28,7 @@ async function replaceFlagSize(target, asset) {
         small: 213,
     }
     let width = target.dataset.sizes
+    if (width == "") width = 'normal';
     let buffer = parseInt(width); //this code from .ts ok /_ \, im lazy
     if (buffer) width = buffer;
 
