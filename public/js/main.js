@@ -1,8 +1,10 @@
+var assets_;
+
 window.onload = () => {
     assetsUnpack();
 }
 function assetsUnpack() {
-    const assets_ = document.getElementById("assets");
+    assets_ = document.getElementById("assets");
     const assets = {
         logo: {
             logoBl: assets_.getElementsByClassName('logoBl')[0],
@@ -24,32 +26,37 @@ function assetsUnpack() {
 
 
 async function replaceFlagSize(target, asset) {
-    // TODO: make frontend config file
-    const originalWidth = 717;
-    const originalHeight = 225;
+    // render width and height for a bit
+    const originalDisplay = assets_.style.display;
+    assets_.style.display = "block"
+
+    // get original size
+    const originalWidth = asset.offsetWidth * 21 / 20; //(x+x*5%); 5% = gap value
+    const originalHeight = asset.offsetHeight;
+
+    // copy from asset
+    const container = asset.cloneNode(true);
+    const logo = container.firstElementChild;
+
+    assets_.style.display = originalDisplay;
 
     const sizes = {//(width)
         normal: 340,
         big: originalWidth,
         small: 213,
     }
-    let width = target.dataset.sizes
-    if (!width | width == "") width = 'normal';
-    let buffer = parseInt(width); //this code from .ts ok /_ \, im lazy
-    if (buffer) width = buffer;
 
-    // copy from asset
-    const container = asset.cloneNode(true);
-    const logo = container.firstElementChild;
+    let width = target.dataset.sizes;
+    let width_ = parseInt(width);
+    if (!width | width == "") width = 'normal';
+    if (!width_) width = sizes[width];
+    else width = width_;
+
+    let height = (originalHeight / originalWidth) * width;
 
     // calculate scale
-    let transformValue =
-        typeof width == 'number' ?
-            (width / originalWidth) :
-            sizes[width] / originalWidth;
+    let transformValue = (width / originalWidth)
 
-    if (typeof width == 'string') width = sizes[width];
-    let height = (originalHeight / originalWidth) * width;
 
     // set size
     logo.style.height = `${height / transformValue}px`;

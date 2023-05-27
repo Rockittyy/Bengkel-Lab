@@ -4,7 +4,7 @@ div.logo{
 }
 .logo .content {
     display: flex;
-    width:fit-content;
+    width:100%;
     align-items: center;
     gap: 0 5%;
 }

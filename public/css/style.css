@@ -17,14 +17,17 @@
 
     --extraBold: 800;
 
-    --side-bar-width: 34%;
+    --side-bar-width: 40.5%;
+    --side-bar-width-min: 360px;
     /* --side-bar-width: 780px; */
+}
+html,body{
+    width: 100%;
+    height: 100%;
 }
 
 body {
     margin: 0;
-    width: 100%;
-    height: 100%;
 
     background-color: var(--main-bg-color);
 
@@ -68,7 +71,7 @@ h1 {
 h2 {
     font-size: 72px;
     font-family: 'Nebula, reguler';
-    line-height: 1em;
+    line-height: 0.8em;
 }
 
 
@@ -77,8 +80,8 @@ h2 {
 h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 31px;
-    color: var(darkGrey);
+    font-size: 32px;
+    color: var(--darkGrey);
 }
 
 p {

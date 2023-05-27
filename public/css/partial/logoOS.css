@@ -1,9 +1,7 @@
 .logo.os>div{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap:30px 0;
 }
 
 .logo.os h2{
@@ -12,4 +10,9 @@
 
 .logo.os h4{
     font-size: 23px;
+    margin-top: 30px;
+}
+
+.logo.bengkelIot .content .image {
+    height: 185px;
 }
