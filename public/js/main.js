@@ -1,21 +1,27 @@
 window.onload = () => {
     assetsUnpack();
 }
-
 function assetsUnpack() {
     const assets_ = document.getElementById("assets");
     const assets = {
-        logoBl: assets_.getElementsByClassName('logoBl')[0],
+        logo: {
+            logoBl: assets_.getElementsByClassName('logoBl')[0],
+            logoLs: assets_.getElementsByClassName('labShop')[0],
+            logoBiot: assets_.getElementsByClassName('bengkelIot')[0]
+        }
+    };
 
-    }
     // unpack individually
-    /**logoBl*/    {
-        let tags = [...document.getElementsByTagName('logoBl')];
-        for (const tag of tags)
-            replaceFlagSize(tag, assets.logoBl);
-
+    /**logos*/
+    {
+        for (const logo of Object.keys(assets.logo)) {
+            let tags = [...document.getElementsByTagName(logo)];
+            for (const tag of tags)
+                replaceFlagSize(tag, assets.logo[logo]);
+        }
     }
 }
+
 
 async function replaceFlagSize(target, asset) {
     // TODO: make frontend config file
@@ -28,7 +34,7 @@ async function replaceFlagSize(target, asset) {
         small: 213,
     }
     let width = target.dataset.sizes
-    if (width == "") width = 'normal';
+    if (!width | width == "") width = 'normal';
     let buffer = parseInt(width); //this code from .ts ok /_ \, im lazy
     if (buffer) width = buffer;
 

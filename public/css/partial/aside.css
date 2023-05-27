@@ -1,0 +1,46 @@
+
+aside.left {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    width: var(--side-bar-width);
+    height: 100vh;
+    background-image: linear-gradient(to top, var(--lightGrey) 0%, var(--main-bg-color) 40%);
+}
+
+/* TODO: really should make this flex */
+aside.left>div.content {
+    margin: 0 50px;
+    margin-top: 6%;
+    max-width: 500px;
+    font-size: 20px;
+}
+
+aside.left+main {
+    margin-left: var(--side-bar-width);
+}
+
+aside.left ul.main {
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 70px;
+}
+
+aside.left ul.main>li, .lineStroke {
+    margin-bottom: 15px;
+}
+
+/* for the linestroke margin */
+aside.left ul.main>li:first-child {
+    margin-bottom: 0px;
+}
+
+aside.left .other_servis h3{
+    font-size: 18px;
+}

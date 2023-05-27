@@ -1,10 +1,15 @@
 /* BL logo:big */
-.logoBl .content {
+div.logo{
+    width:fit-content;
+}
+.logo .content {
     display: flex;
-    gap: 0 40px;
+    width:fit-content;
+    align-items: center;
+    gap: 0 5%;
 }
 
-.logoBl .content .image {
+.logo .content .image {
     height: 225px;
 }
 
@@ -19,6 +24,6 @@
     color: var(--gold);
 }
 
-.logoBl .content .texts h2, h4 {
+.logo .content  h2, h4 {
     margin: 0;
 }

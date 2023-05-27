@@ -11,9 +11,14 @@
 :root {
     --main-bg-color: #E4E4E4;
     --gold: #634C19;
-    --grey: #606060;
+    --lightGrey: #ACACAC;
+    --grey: #707070;
+    --darkGrey: #606060;
 
     --extraBold: 800;
+
+    --side-bar-width: 34%;
+    /* --side-bar-width: 780px; */
 }
 
 body {
@@ -22,11 +27,31 @@ body {
     height: 100%;
 
     background-color: var(--main-bg-color);
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.white {
+    background-color: white;
 }
 
 body.singlePage {
     width: 100vw;
     height: 100vh;
+}
+
+/* common */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black
 }
 
 /* h's below */
@@ -43,7 +68,7 @@ h1 {
 h2 {
     font-size: 72px;
     font-family: 'Nebula, reguler';
-    line-height: 59px;
+    line-height: 1em;
 }
 
 
@@ -53,7 +78,7 @@ h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 31px;
-    color: var(--grey);
+    color: var(darkGrey);
 }
 
 p {
@@ -70,6 +95,8 @@ h3, h5, h6 {
 /* medium */
 h3 {
     font-weight: 500;
+    font-size: 26px;
+    margin: 0;
 }
 
 /* semi bold */
@@ -87,4 +114,10 @@ h6 {
 .semi-header {
     font-size: 30px;
     line-height: 37px;
+}
+
+.lineStroke {
+    height: 1px;
+    width: 100%;
+    background-color: var(--grey);
 }

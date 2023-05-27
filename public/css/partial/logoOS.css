@@ -1,0 +1,15 @@
+.logo.os>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:30px 0;
+}
+
+.logo.os h2{
+    font-size: 90px;
+}
+
+.logo.os h4{
+    font-size: 23px;
+}

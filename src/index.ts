@@ -58,6 +58,7 @@ const ejsOb = {
 //* main start here
 app.get('/', (req, res) => { render(res, "index") });
 app.get('/debug', (req, res) => { render(res, "debug") });
+app.get('/projects', (req, res) => { render(res, "projects") });
 app.get('/signin', (req, res) => { render(res, "sign in") }); //!update later
 
 
