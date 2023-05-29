@@ -32,8 +32,8 @@ aside.left::before {
 aside.left>div.content {
     margin-left: 18.317536772160784%;
     margin-right: 15.597947310133986%;
-    margin-top: 8.09%;
-    font-size: 25px;
+    margin-top: 6.09%;
+    font-size: 22px;
 }
 
 aside.left+main {
@@ -44,12 +44,16 @@ aside.left ul.main {
     font-weight: 600;
     line-height: 30px;
 
-    margin-top: 95px;
+    margin-top: 80px;
     margin-bottom: 60px;
 }
 
+aside.left .lineStroke{
+    min-height: 1px;
+}
+
 aside.left ul.main>li, .lineStroke {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 /* for the linestroke margin */
@@ -57,8 +61,13 @@ aside.left ul.main>li:first-child {
     margin-bottom: 10px;
 }
 
+aside.left .other_servis {
+    height: 35vh;
+    margin-top: 5%;
+}
+
 aside.left .other_servis h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 25px;
 }
 
