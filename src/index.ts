@@ -16,13 +16,13 @@ const __public = path.join(__parentdir, "public");
 const app = express();
 
 
+const __views = path.join(__parentdir,'src', 'views');
+const __partials = path.join(__views, 'partials');
+
 //* use ejs basicly
 app.set('view engine', 'ejs');
-app.set('views', path.join(__parentdir, 'views')); //set the base ejs ussage as the views dir
+app.set('views', __views); //set the base ejs ussage as the views dir
 app.use(express.static(__public)); // for serving public assets when requested
-
-const __views = path.join(__parentdir, 'views');
-const __partials = path.join(__views, 'partials');
 
 //* Utilitys
 const render = (res: express.Response, file: string, extra?: object) => res.render(file, { ...extra, ...ejsOb });

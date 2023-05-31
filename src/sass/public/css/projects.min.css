@@ -1,0 +1,30 @@
+.main.midle-body {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main.midle-body .projects {
+  margin-top: 45px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 25px;
+}
+
+.main.midle-body .projects .img {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+}
+
+.main.midle-body h3 {
+  font-size: 24px;
+}/*# sourceMappingURL=projects.min.css.map */

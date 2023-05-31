@@ -1,0 +1,59 @@
+$nav-padding: 20px;
+$nav-margin: 3.963011889035667vh;
+$nav-height: 80px;
+
+// nav+.main.midle-body {
+//     // margin-top: calc($nav-margin + $nav-padding + $nav-height);
+// }
+
+nav {
+    position: sticky;
+    // position: fixed;
+    top: 0;
+    // right: 0;
+    background-color: white;
+
+    // &.general{
+
+    // }
+
+    /* width: fit-content; */
+    width: 100%;
+    height: $nav-height;
+    padding-top: $nav-padding;
+    margin-bottom: $nav-margin;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 25px;
+        margin-right: 7.9375vw;
+    }
+
+    .account {
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .iconA {
+        &.menu img {
+            height: 35px;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+
+        }
+    }
+}

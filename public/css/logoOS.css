@@ -1,0 +1,18 @@
+.logo.os > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo.os h2 {
+  font-size: 90px;
+}
+
+.logo.os h4 {
+  font-size: 23px;
+  margin-top: 30px;
+}
+
+.logo.bengkelIot .content .image {
+  height: 185px;
+}/*# sourceMappingURL=logoOS.css.map */

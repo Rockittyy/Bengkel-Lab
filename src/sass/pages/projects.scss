@@ -1,0 +1,89 @@
+@import '../sass-partial/mixins';
+
+.main.midle-body {
+    height: 100%;
+    width: 65%;
+
+    @include flex-column;
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .container {
+
+        h5 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        width: 78.92156862745098%;
+        @include flex-column;
+
+
+        .projects {
+            margin-top: 45px;
+
+            width: 100%;
+            max-width: 550px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 30px;
+
+            .project {
+                @include flex-column;
+                row-gap: 30px;
+            }
+
+            text-align: center;
+            font-size: 25px;
+
+            h5 {
+                max-width: 100px;
+                margin: 0;
+            }
+
+            .img {
+                width: 200px;
+                height: 200px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 20%;
+
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.21);
+            }
+        }
+    }
+
+    .bars {
+        margin-top: 60px;
+        width: 100%;
+
+        * {
+            width: 100%;
+        }
+
+        >* {
+            margin: 12px 0;
+
+            >* {
+                margin: 7px 0;
+            }
+        }
+
+        .persentage {
+            display: flex;
+            justify-content: space-between;
+
+            * {
+                width: fit-content;
+            }
+        }
+
+    }
+}

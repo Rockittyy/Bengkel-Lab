@@ -1,0 +1,71 @@
+.main.midle-body {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main.midle-body h3 {
+  font-size: 24px;
+}
+.main.midle-body .container {
+  width: 78.9215686275%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main.midle-body .container h5 {
+  font-size: 20px;
+  margin: 0;
+}
+.main.midle-body .container .projects {
+  margin-top: 45px;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+.main.midle-body .container .projects .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.main.midle-body .container .projects h5 {
+  max-width: 100px;
+  margin: 0;
+}
+.main.midle-body .container .projects .img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.21);
+}
+.main.midle-body .bars {
+  margin-top: 60px;
+  width: 100%;
+}
+.main.midle-body .bars * {
+  width: 100%;
+}
+.main.midle-body .bars > * {
+  margin: 12px 0;
+}
+.main.midle-body .bars > * > * {
+  margin: 7px 0;
+}
+.main.midle-body .bars .persentage {
+  display: flex;
+  justify-content: space-between;
+}
+.main.midle-body .bars .persentage * {
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=projects.css.map */

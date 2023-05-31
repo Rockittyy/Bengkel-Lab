@@ -1,0 +1,31 @@
+/* BL logo:big */
+div.logo {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.logo .content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0 5%;
+}
+
+.logo .content .image {
+  height: 225px;
+}
+
+.logoBl .content .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logoBl .content h2 {
+  color: var(--gold);
+}
+
+.logo .content h2, h4 {
+  margin: 0;
+}/*# sourceMappingURL=logoBl.css.map */

@@ -1,0 +1,72 @@
+aside.left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: var(--side-bar-width-min);
+  width: var(--side-bar-width);
+  height: 100vh;
+}
+
+aside.left * {
+  z-index: 1;
+}
+
+aside.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 24%;
+  /* Set the desired opacity value */
+  background-image: linear-gradient(to top, var(--lightGrey) 0%, var(--main-bg-color) 40%);
+}
+
+/* TODO: really should make this flex */
+aside.left > div.content {
+  margin-left: 18.3175367722%;
+  margin-right: 15.5979473101%;
+  margin-top: 6.09%;
+  font-size: 22px;
+}
+
+aside.left + .main {
+  margin-left: max(var(--side-bar-width), var(--side-bar-width-min));
+}
+
+aside.left ul.main {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+aside.left .lineStroke {
+  min-height: 1px;
+}
+
+aside.left ul.main > li, .lineStroke {
+  margin-bottom: 15px;
+}
+
+/* for the linestroke margin */
+aside.left ul.main > li:first-child {
+  margin-bottom: 10px;
+}
+
+aside.left .other_servis {
+  height: 35vh;
+  margin-top: 5%;
+}
+
+aside.left .other_servis h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+aside.left .other_servis div.os > * {
+  margin-bottom: 25px;
+}/*# sourceMappingURL=aside.css.map */
