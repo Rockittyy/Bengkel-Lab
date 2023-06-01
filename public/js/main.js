@@ -1,7 +1,10 @@
+var onLoad = [assetsUnpack];
+
 var assets_;
 
 window.onload = () => {
-    assetsUnpack();
+    for (const func of onLoad)
+        func();
 }
 function assetsUnpack() {
     assets_ = document.getElementById("assets");
@@ -23,8 +26,6 @@ function assetsUnpack() {
         }
     }
 }
-
-
 async function replaceFlagSize(target, asset) {
     // render width and height for a bit
     const originalDisplay = assets_.style.display;

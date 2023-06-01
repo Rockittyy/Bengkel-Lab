@@ -14,6 +14,9 @@
 
 </style>
 
+<!-- used modules -->
+<script src="./js/bars.js"></script>
+
 <body class="white">
   <%- include('partials/aside') %>
   <section class="main">
@@ -32,10 +35,10 @@
 
     <div class="main midle-body">
 
-      
+
       <div class="container">
         <h3>Apa yang bisa kami bantu hari ini?</h3>
-        
+
         <div class="projects">
 
           <div class="project">
@@ -55,9 +58,10 @@
 
         <div class="bars">
 
-          <div class="on-progress">
+          <div id="on-progress">
             <h5>On Progress Project</h5>
-            <div class="progress-bar">
+            <div class="progress-bar" data-fill="80">
+              <span class="fill"></span>
             </div>
             <div class="persentage">
               <h5>4/6</h5>
@@ -65,9 +69,10 @@
             </div>
           </div>
 
-          <div class="shipping-parts">
+          <div id="shipping-parts">
             <h5>Shipping Parts</h5>
-            <div class="progress-bar">
+            <div class="progress-bar" data-fill="20">
+              <span class="fill"></span>
             </div>
             <div class="persentage">
               <h5>1/3</h5>
@@ -76,9 +81,25 @@
           </div>
         </div>
       </div>
-
+      
+      <footer>
+        <div class="container">
+          <h5>Copyright© 2020 . All Rights Reserved</h5>
+          <h5>Site Map</h5>
+          <h5>Privacy Policy</h5>
+        </div>
+      </footer>
     </div>
+    
+
   </section>
 </body>
+
+<script>
+  const Pbars = {
+    projectProgress: new bars(document.querySelector(".bars #on-progress .progress-bar")),
+    shippingParts: new bars(document.querySelector(".bars #shipping-parts .progress-bar"))
+  }
+</script>
 
 </html>

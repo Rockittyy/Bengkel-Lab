@@ -10,6 +10,7 @@
 :root {
   --main-bg-color: #E4E4E4;
   --gold: #634C19;
+  --lightGold: #AE8F50;
   --lightGrey: #ACACAC;
   --grey: #707070;
   --darkGrey: #606060;
@@ -17,7 +18,7 @@
   --side-bar-width: 40.5%;
   --side-bar-width-min: 360px;
   /* --side-bar-width: 780px; */
-  --progress-bar-height:20px;
+  --progress-bar-height: 20px;
 }
 
 html,
@@ -31,12 +32,10 @@ body {
   background-color: var(--main-bg-color);
   font-family: "Montserrat", sans-serif;
 }
-
 body.white {
   background-color: white;
 }
-
-body.singlePage {
+body body.singlePage {
   width: 100vw;
   height: 100vh;
 }
@@ -125,4 +124,28 @@ h6 {
   background-color: var(--main-bg-color);
   height: 20px;
   border-radius: 666666px;
+}
+.progress-bar .fill {
+  border-radius: 666666px;
+  display: block;
+  background-color: var(--lightGold);
+  height: 100%;
+  width: attr(data-fill);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 77.3426573427%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container h5 {
+  font-size: 10px;
 }/*# sourceMappingURL=style.css.map */
